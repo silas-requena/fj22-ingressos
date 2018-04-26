@@ -9,7 +9,7 @@ public class GerenciadorDeSessao {
 	
 	private List<Sessao> sessoesDaSala;
 	
-	public GerenciadorDeSessao(List<Sessao> sessoeDaSala) {
+	public GerenciadorDeSessao(List<Sessao> sessoesDaSala) {
 		this.sessoesDaSala = sessoesDaSala;
 	}
 	
@@ -20,6 +20,11 @@ public class GerenciadorDeSessao {
 	
 		boolean terminaAntes = sessaoNova.getHorarioTermino().isBefore(horarioSessaoExistente);
 		boolean comecaDepois = sessaoExistente.getHorarioTermino().isBefore(horarioSessaoNova);
+		
+		System.out.println(sessaoExistente.getHorario() + " - " + sessaoExistente.getHorarioTermino());
+		System.out.println(sessaoNova.getHorario() + " - " + sessaoNova.getHorarioTermino());
+		
+		System.out.println("\n \n \n");
 		
 		if (terminaAntes || comecaDepois) {
 			return false;
