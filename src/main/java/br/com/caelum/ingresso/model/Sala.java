@@ -29,7 +29,7 @@ public class Sala {
 
     @NotBlank
     private String nome;
-    private	BigDecimal preco;
+    private	BigDecimal preco = BigDecimal.ZERO;
     
     @OneToMany(fetch = FetchType.EAGER)
     private List<Lugar> lugares = new ArrayList<>();
