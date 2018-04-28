@@ -26,7 +26,7 @@ public class DescontoTest {
 		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), filme, sala);
 		Ingresso ingresso = new Ingresso(sessao, TipoDeIngresso.INTEIRO, lugar);
 		
-		BigDecimal precoEsperado = new BigDecimal("32.5");
+		BigDecimal precoEsperado = new BigDecimal("32.50");
 		
 		Assert.assertEquals(precoEsperado, ingresso.getPreco());
 	}
