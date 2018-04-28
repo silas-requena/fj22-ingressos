@@ -30,7 +30,7 @@
 	<bean id="mysqlDS" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="username" value="${db.username}"/>
 		<property name="password" value="${db.password}"/>
-		<property name="url" value="${db.type}://${db.host}/${db.name}${db.extras}"/>
+		<property name="url" value="jdbc:${db.type}://${db.host}/${db.name}${db.extras}"/>
 		<property name="driverClassName" value="${db.class.name}"/>
 	</bean>
 	
